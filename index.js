@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.get('/', (req, res) => {
-  res.send('Hello World!')
+  res.send('Hello World!'+req.ip);
 })
 
 app.use('/api/wholesaler', require('./routes/wholesaler'))
